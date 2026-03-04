@@ -11,7 +11,6 @@ class ApiError(Exception):
         self.status_code = status_code
         self.details = details
 
-
 def error_payload(error_code: str, message: str, details: Any | None = None) -> dict:
     payload = {"error_code": error_code, "message": message}
     if details is not None:
